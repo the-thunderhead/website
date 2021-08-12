@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+:root {
+	--dark: 33, 33, 33;
+	--light: 239, 239, 239;
+	--thunderhead: 25, 176, 145;
+	--background: 52, 48, 67;
+}
+
+html { scroll-behavior: smooth; } 
+
+body {
+	font-family: 'Roboto Mono', monospace;
+	margin: 0;
+	overflow-x: hidden;
+	color: rgb(var(--light));
+	background: rgb(var(--dark));
+}
+
+button {
+	font: inherit;
+	font-size: calc(1vh + 1vw);
+	cursor: pointer;
+	border: none;
+	filter: drop-shadow(0 0 3px #fff5);
+	margin: 0 1.5vw 0 1.5vw;
+	padding: 0.8vh 1vw;
+	transition: 0.3s;
+}
+
+button:hover {
+	padding: calc(1vh + 0.5vw);
+}
+
+.light { color: rgb(var(--light)); }
+
+.dark { color: rgb(var(--dark)); }
+
+.flex { display: flex; }
+
+.center-flex {
+	justify-content: center;
+	align-items: center;
+}
+
+.vertical-flex { flex-direction: column; }
+
+.center-text { text-align: center; }
+
+.invite-button {
+	color: #fff;
+	box-shadow: 1vw 1vh rgba(var(--thunderhead), 30%);
+	background: rgb(var(--thunderhead));
+}
+
+.source-button {
+	color: #fff;
+	box-shadow: 1vw 1vh rgba(var(--dark), 60%);
+	background: rgb(var(--dark));
+}
+
+.arrow {
+	padding-top: 5vh;
+	width: 4vw;
+	transform: translateY(0);
+	transition: 0.3s;
+	animation-duration: 1.5s;
+	animation: 1.5s ease-in-out infinite;
+	animation-name: bob;
+}
+
+.wave {
+	align-self: flex-end;
+	margin-top:auto;
+	/* Wave SVG from https://stackoverflow.com/questions/59398259/inline-svg-in-css-doing-background-image */
+}
+
+#main-cover {
+	height: 150vh;
+	min-height: 500px;
+	background: radial-gradient(circle, rgba(27, 21, 40, 1) 0%, rgba(32, 47, 55, 1) 100%);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#after-cover {
+	height: 120vh;
+	min-height: 500px;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#name {
+	font-size: calc(4vh + 3vw);
+	margin: 30vh 0 0 0;
+}
+
+#description {
+	margin: 0 0 5% 0;
+}
+
+@keyframes bob {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(0.2rem); }
+	100% { transform: translateY(0); }
+}
