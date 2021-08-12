@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 :root {
 	--dark: 33, 33, 33;
+	--superdark: 21, 21, 21;
 	--light: 239, 239, 239;
 	--thunderhead: 25, 176, 145;
 	--background: 52, 48, 67;
@@ -14,6 +15,15 @@ body {
 	overflow-x: hidden;
 	color: rgb(var(--light));
 	background: rgb(var(--dark));
+}
+h1 {
+	font-size: calc(2vh + 1vw);
+}
+p {
+	font-size: calc(1vh + 1vw);
+}
+a {
+	color: rgb(var(--thunderhead));
 }
 
 button {
@@ -68,25 +78,25 @@ button:hover {
 	animation-name: bob;
 }
 
-.wave {
-	align-self: flex-end;
-	margin-top:auto;
-	/* Wave SVG from https://stackoverflow.com/questions/59398259/inline-svg-in-css-doing-background-image */
-}
-
-#main-cover {
+#main {
 	height: 150vh;
 	min-height: 500px;
-	background: radial-gradient(circle, rgba(27, 21, 40, 1) 0%, rgba(32, 47, 55, 1) 100%);
 	background-size: cover;
-	background-attachment: fixed;
+	background: radial-gradient(circle, rgba(27, 21, 40, 1) 0%, rgba(32, 47, 55, 1) 100%) fixed;
 }
 
-#after-cover {
+#after {
 	height: 120vh;
 	min-height: 500px;
 	background-size: cover;
-	background-attachment: fixed;
+	background: rgb(var(--dark)) fixed;
+}
+
+#footer {
+	height: 20vh;
+	min-height: 100px;
+	background-size: cover;
+	background: rgb(var(--superdark)) fixed;
 }
 
 #name {
