@@ -25,20 +25,32 @@ p {
 a {
 	color: rgb(var(--thunderhead));
 }
-
+code {
+	background-color: rgb(var(--superdark));
+	border-radius: 5px;
+	padding: 5px;
+}
 button {
+	color: #fff;
 	font: inherit;
 	font-size: calc(1vh + 1vw);
 	cursor: pointer;
 	border: none;
-	filter: drop-shadow(0 0 3px #fff5);
+	border-radius: 6px;
 	margin: 0 1.5vw 0 1.5vw;
-	padding: 0.8vh 1vw;
+	padding: 1vh 1vw;
 	transition: 0.3s;
+}
+.invite-button {
+	background: rgb(var(--thunderhead));
+}
+
+.source-button {
+	background: rgb(var(--dark));
 }
 
 button:hover {
-	padding: calc(1vh + 0.5vw);
+	box-shadow: 0.6vw 1.2vh rgba(var(--light), 60%);
 }
 
 .light { color: rgb(var(--light)); }
@@ -56,18 +68,6 @@ button:hover {
 
 .center-text { text-align: center; }
 
-.invite-button {
-	color: #fff;
-	box-shadow: 1vw 1vh rgba(var(--thunderhead), 30%);
-	background: rgb(var(--thunderhead));
-}
-
-.source-button {
-	color: #fff;
-	box-shadow: 1vw 1vh rgba(var(--dark), 60%);
-	background: rgb(var(--dark));
-}
-
 .arrow {
 	padding-top: 5vh;
 	width: 4vw;
@@ -81,15 +81,16 @@ button:hover {
 #main {
 	height: 150vh;
 	min-height: 500px;
+	background-image: url("../media/background.png");
 	background-size: cover;
-	background: radial-gradient(circle, rgba(27, 21, 40, 1) 0%, rgba(32, 47, 55, 1) 100%) fixed;
+	background-attachment: fixed;
 }
 
 #after {
 	height: 120vh;
+	width: 100%;
 	min-height: 500px;
-	background-size: cover;
-	background: rgb(var(--dark)) fixed;
+	background-color: rgb(var(--dark));
 }
 
 #footer {

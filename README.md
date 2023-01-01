@@ -3,5 +3,5 @@
 The Thunderhead's website (Work In Progress)
 
 ### Credits
-
-Wave SVG from this [Stack Overflow Question](https://stackoverflow.com/questions/59398259/inline-svg-in-css-doing-background-image)
+- [Stormy Clouds at Night Photo](https://unsplash.com/photos/pbxwxwfI0B4) — Used as a background
+- [StackOverflow](https://stackoverflow.com/questions/59398259/inline-svg-in-css-doing-background-image) — Wave SVG
